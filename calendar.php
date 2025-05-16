@@ -260,7 +260,10 @@ echo "</div>";
     // 以block box製作的日曆 end (老師第227+1行)
     ?>
 
-    <h2 style="text-align: center;"><?=date("Y 年 m 月");?></h2>
+
+
+    <!-- 以下為table做的日曆 &註解起來 -->
+    <!-- <h2 style="text-align: center;"><?=date("Y 年 m 月");?></h2>
     <table>
         <tr>
             <td>日</td>
@@ -270,60 +273,60 @@ echo "</div>";
             <td>四</td>
             <td>五</td>
             <td>六</td>
-        </tr>
+        </tr> -->
     <?php
-    for($i=0; $i<6 ;$i++){
-        echo "<tr>";
+    // for($i=0; $i<6 ;$i++){
+    //     echo "<tr>";
 
-        for($j=0; $j<7; $j++){
-            $day = $j+($i*7) - $firstDayWeek; //格子是此月的幾號
-            // $d = date("Y-m-$day"); //???
-            $timestamp = strtotime("$day days", strtotime($firstDay));
-            $date=date("Y-m-d", $timestamp);
-            $class="";
+    //     for($j=0; $j<7; $j++){
+    //         $day = $j+($i*7) - $firstDayWeek; //格子是此月的幾號
+    //         // $d = date("Y-m-$day"); //???
+    //         $timestamp = strtotime("$day days", strtotime($firstDay));
+    //         $date=date("Y-m-d", $timestamp);
+    //         $class="";
 
-            /*echo "<td>";
-            if($day>0 && $day<=$theDaysOfMonth){
-                echo $day;
-            }
-            echo "</td>";*/
-            /*echo "<td>";
-            echo $date;
-            echo "</td>";*/
+    //         /*echo "<td>";
+    //         if($day>0 && $day<=$theDaysOfMonth){
+    //             echo $day;
+    //         }
+    //         echo "</td>";*/
+    //         /*echo "<td>";
+    //         echo $date;
+    //         echo "</td>";*/
 
-            if(date("N",$timestamp)>5){
-                $class=$class . " holiday";
-            }
+    //         if(date("N",$timestamp)>5){
+    //             $class=$class . " holiday";
+    //         }
 
-            if($today==$date){
-                $class=$class . " today";
-            }else if(date("m",$timestamp)!=date("m",strtotime($firstDay))){
-                $class=$class ." other-month";
-            }
+    //         if($today==$date){
+    //             $class=$class . " today";
+    //         }else if(date("m",$timestamp)!=date("m",strtotime($firstDay))){
+    //             $class=$class ." other-month";
+    //         }
 
-            if($timestamp<strtotime($today)){
-                $class=$class . " pass-date";
-            }
+    //         if($timestamp<strtotime($today)){
+    //             $class=$class . " pass-date";
+    //         }
 
-            echo "<td class='$class' data-date='$date'>";
-                echo "<div class='date-num'>";
-                    echo date("d",$timestamp);
-                echo "</div>";
+    //         echo "<td class='$class' data-date='$date'>";
+    //             echo "<div class='date-num'>";
+    //                 echo date("d",$timestamp);
+    //             echo "</div>";
 
-                echo "<div class='date-event'>";
-                    if(isset($spDate[$date])){
-                        echo $spDate[$date];
-                    }
-                echo "</div>";
-            echo "</td>";
+    //             echo "<div class='date-event'>";
+    //                 if(isset($spDate[$date])){
+    //                     echo $spDate[$date];
+    //                 }
+    //             echo "</div>";
+    //         echo "</td>";
 
 
-        }
+    //     }
 
-        echo "</tr>";
-    }
+    //     echo "</tr>";
+    // }
     ?>
-    </table>
+    <!-- </table> -->
     
 </body>
 </html>
