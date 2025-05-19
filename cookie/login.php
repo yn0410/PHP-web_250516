@@ -19,10 +19,6 @@
 </head>
 <body>
     <!-- PHP L1的練習2 => 登入檢查 -->
-     <?php
-    // if(!isset($_SESSION['login'])){
-
-    ?>
     <form action="check.php" method='post'>
         <div class="container">
             <div>
@@ -39,14 +35,7 @@
         <input type="submit" value="登入">
         <input type="reset" value="清空內容">
     </form>
-    <?php
-    // }elseif(isset($_SESSION['login']) && $_SESSION['login'] == 1){
-    //     echo "登入成功";
-    // }else{
-    //     echo "登入失敗";
-    // }
-    
-    ?>
+
     
 </body>
 </html>
