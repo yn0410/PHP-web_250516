@@ -8,7 +8,26 @@
 </head>
 <body>
     <?php include_once "header.php";?>
-    <?php include "main.php";?>
+    <?php 
+    $page=isset($_GET['page'])?$_GET['page']:'main';
+    switch($page){
+        case 'list':
+            include "list.php";
+            break;
+        case 'new':
+            include "new.php";
+            break;
+        case 'query':
+            include "query.php";
+            break;
+        case 'about':
+            include "about.php";
+            break;
+        default:
+            include "main.php";
+    }
+
+    ?>
     <?php include "footer.php";?>
 </body>
 </html>
