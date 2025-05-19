@@ -10,7 +10,15 @@
     <?php include_once "header.php";?>
     <?php 
     $page=isset($_GET['page'])?$_GET['page']:'main';
-    switch($page){
+    // $page = $_GET['page'] ?? 'main'; //上一行的更精簡
+
+    $file = $page . ".php";
+    if(file_exists($file)){
+        include $file;
+    }else{
+        include "main.php";
+    }
+    /*switch($page){
         case 'list':
             include "list.php";
             break;
@@ -25,7 +33,7 @@
             break;
         default:
             include "main.php";
-    }
+    }*/
 
     ?>
     <?php include "footer.php";?>
