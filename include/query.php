@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>學生管理系統-新增學生</title>
+    <title>學生管理系統-查詢學生</title>
     <style>
         body {
             font-family: Arial, sans-serif;
