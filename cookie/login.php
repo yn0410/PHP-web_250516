@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員登入</title>
     <style>
-        .container{
+        /* .container{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -14,11 +14,15 @@
             height: 300px;
             background-color: lightblue;
 
-        }
+        } */
     </style>
 </head>
 <body>
-    <!-- PHP L1的練習2 => 登入檢查 -->
+    <!-- PHP L2的練習1 => 會員登入 -->
+    <?php
+    if(!isset($_COOKIE['ㄙㄛ'])){
+
+    ?>
     <form action="check.php" method='post'>
         <div class="container">
             <div>
@@ -35,6 +39,11 @@
         <input type="submit" value="登入">
         <input type="reset" value="清空內容">
     </form>
+    <?php
+    }else{
+        echo "登入成功";
+    }
+    ?>
 
     
 </body>
