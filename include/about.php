@@ -65,8 +65,7 @@
         <h2>歡迎來到學生管理系統</h2>
         <p>關於我們</p>
     </main>
-    <footer>
-        <p>&copy; <?php echo date('Y'); ?> 學生管理系統</p>
-    </footer>
+        <?php include "footer.php"; ?>
+
 </body>
 </html>
